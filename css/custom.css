@@ -1,32 +1,44 @@
-/* 强制设置首页顶部封面图 - 使用国内稳定图片 */
+/* === 强制设置首页顶部封面图 - 二次元风格 === */
 #page-header {
-    background-image: url('https://img.zjgsu.edu.cn/images/2021/06/08/7a9d8f3e9c0b4a8e9f0b4a8e9f0b4a8e.jpg') !important;
+    /* 使用这张超稳的二次元壁纸（Pixiv 官方 CDN）*/
+    background-image: url('https://i.pximg.net/img-original/img/2023/08/15/00/00/00/109764567_p0.jpg') !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
-    /* 临时加个边框测试是否生效 */
+    
+    /* 🔴 调试用：红色边框，证明 CSS 生效 */
     border: 5px solid red !important;
+    
+    /* 可选：加半透明遮罩让文字更清晰 */
+    position: relative;
 }
 
-/* 强制设置全站内容区域背景 */
-.layout {
-    background-image: url('https://img.zjgsu.edu.cn/images/2021/06/08/7a9d8f3e9c0b4a8e9f0b4a8e9f0b4a8e.jpg') !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-attachment: fixed !important;
-}
-
-/* 可选：让文字更清晰（加半透明遮罩） */
-#page-header::before,
-.layout::before {
+/* 添加遮罩层 */
+#page-header::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.4); /* 黑色半透明 */
+    z-index: 1;
+}
+
+/* 让标题和导航栏在遮罩之上 */
+#page-header .title,
+#page-header .nav {
+    position: relative;
+    z-index: 2;
+    color: white !important;
+}
+
+/* === 强制设置全站内容区域背景 - 同一张图 === */
+.layout {
+    background-image: url('https://i.pximg.net/img-original/img/2023/08/15/00/00/00/109764567_p0.jpg') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
 }
