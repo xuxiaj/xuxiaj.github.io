@@ -1,0 +1,30 @@
+/* 强制设置首页顶部封面图 */
+#page-header {
+    background-image: url('https://w.wallhaven.cc/full/wq/wallhaven-wqeryx.jpg') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+/* 强制设置全站内容区域背景 */
+.layout {
+    background-image: url('https://w.wallhaven.cc/full/wq/wallhaven-wqeryx.jpg') !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+/* 可选：让文字更清晰（加半透明遮罩） */
+#page-header::before,
+.layout::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* 黑色半透明遮罩 */
+    z-index: -1;
+}
