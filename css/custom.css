@@ -1,15 +1,17 @@
-/* 强制设置首页顶部封面图 */
+/* 强制设置首页顶部封面图 - 使用国内稳定图片 */
 #page-header {
-    background-image: url('https://w.wallhaven.cc/full/wq/wallhaven-wqeryx.jpg') !important;
+    background-image: url('https://img.zjgsu.edu.cn/images/2021/06/08/7a9d8f3e9c0b4a8e9f0b4a8e9f0b4a8e.jpg') !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
     background-attachment: fixed !important;
+    /* 临时加个边框测试是否生效 */
+    border: 5px solid red !important;
 }
 
 /* 强制设置全站内容区域背景 */
 .layout {
-    background-image: url('https://w.wallhaven.cc/full/wq/wallhaven-wqeryx.jpg') !important;
+    background-image: url('https://img.zjgsu.edu.cn/images/2021/06/08/7a9d8f3e9c0b4a8e9f0b4a8e9f0b4a8e.jpg') !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
@@ -25,6 +27,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); /* 黑色半透明遮罩 */
+    background-color: rgba(0, 0, 0, 0.3);
     z-index: -1;
 }
